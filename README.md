@@ -129,6 +129,7 @@ question_body_original    | string |  問題的原始內容 |
 | reputation_change_year |    int   |       2021 一年內的 reputation 變化   |
 
 被接受的回答的回答數量較高，與先前文獻的研究相符
+
 <img src="img/ans_num.png" alt="ans_num" width="400"/>
 
 ## 研究方法
@@ -161,12 +162,12 @@ question_body_original    | string |  問題的原始內容 |
     ![result](img/model_result.png)
   - AUC Score：
 
-  |                  |      DNN     |      LSTM    |     Bi-LSTM    |     XGBoost    |      CNN    |
-  |:----------------:|:------------:|:------------:|:--------------:|:-----------------:|:-----------:|
-  |     AUC Score    |     0.752    |     0.712    |      0.739     |        0.65       |     0.79    |
-  |                  |              |              |                |                   |             |
+    |                  |      DNN     |      LSTM    |     Bi-LSTM    |     XGBoost    |      CNN    |
+    |:----------------:|:------------:|:------------:|:--------------:|:-----------------:|:-----------:|
+    |     AUC Score    |     0.752    |     0.712    |      0.739     |        0.65       |     0.79    |
+    |                  |              |              |                |                   |             |
   - ROC curve：根據表現最佳的 W2V + CNN 模型，繪製 ROC curve
-  ![roc](img/roc.png)
+    ![roc](img/roc.png)
 
 ## 結論
 - 模型缺陷
