@@ -65,8 +65,8 @@ question_code_size    | int |  code 的字數 |
 question_body_original    | string |  問題的原始內容 |
 
 觀察資料集中 tag 分佈
-![tag](img/tag.png)
-![cloud](img/cloud.png)
+<img src="img/tag.png" alt="tag" width="200"/>
+<img src="img/cloud.png" alt="cloud" width="200"/>
 
 - 回答方面
 
