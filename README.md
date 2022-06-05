@@ -65,7 +65,7 @@ question_tags    | list |  問題標記的 tag|
 question_code_size    | int |  code 的字數 |
 question_body_original    | string |  問題的原始內容 |
 
-觀察資料集中 tag 分佈
+觀察資料集中 tag 分佈，可以發現與 python 和 javascript 有關的問答最為多數
 
 <img src="img/tag.png" alt="tag" width="400"/>
 
