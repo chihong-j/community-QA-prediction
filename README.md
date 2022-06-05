@@ -159,13 +159,16 @@ question_body_original    | string |  問題的原始內容 |
 ![feature](img/feature.png)
 - 預測結果
   - 準確率：不論哪種模型，皆是以採用「純文字內容以及回答相關變數」和「純文字內容、回答相關變數、以及回答者相關變數」的特徵時表現最好
+  
     <img src="img/model_result.png" alt="model_result" width="600"/>
+    
   - AUC Score：
 
     |                  |      DNN     |      LSTM    |     Bi-LSTM    |     XGBoost    |      CNN    |
     |:----------------:|:------------:|:------------:|:--------------:|:-----------------:|:-----------:|
     |     AUC Score    |     0.752    |     0.712    |      0.739     |        0.65       |     0.79    |
   - ROC curve：根據表現最佳的 W2V + CNN 模型，繪製 ROC curve
+  
     ![roc](img/roc.png)
 
 ## 結論
