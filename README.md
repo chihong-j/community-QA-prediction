@@ -101,11 +101,17 @@ question_body_original    | string |  問題的原始內容 |
 繪製 box plot 來辨識資料在 accepted 與 not accepted 之間的差異，由於資料異常值較多，作圖前先進行溫賽化處理(winsorize)，將第 5 百分位數以下和第 95 百分位數以上的資料替換成第 5 百分位數和第 95 百分位數的數值。以下列出有明顯差異的指標
 
 答案的長度、答案中程式碼的長度皆是被接受的回答較大，與先前文獻的研究相符
+
 <img src="img/code_size.png" alt="code_size" width="600"/>
+
 提問者的專長與問題範疇的相似度、回答中的外部連結數量皆是被接受的回答較高，為此次研究的發現
+
 <img src="img/common.png" alt="common" width="600"/>
+
 另外，在回答的用字頻率上，針對是否被接受的回答以及不同主題的問答都有不同的結果
+
 <img src="img/accept_cloud.png" alt="accept_cloud" width="400"/>
+
 <img src="img/tag_cloud.png" alt="tag_cloud" width="400"/>
 
 - 回答者方面
