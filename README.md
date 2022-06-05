@@ -184,6 +184,22 @@ question_body_original    | string |  問題的原始內容 |
   - 在介面編排上，可以按照被接受的機率來排序回答，以提供最佳使用者體驗
   - 進一步媒合最適合的回答者和問題(e.g. 參考使用者和問題的 tag)
 
+## 附錄
+本次研究中另外嘗試了一種方法 [9]，將此任務視為單選題，在一個題目中，只有選中正確的答案才算答對，最後計算答對題數除以總題數作為正確率。
+
+- Pre-trained model：BERT AutoModelForMultipleChoice
+- 研究結果：
+
+  | Epoch | Training Loss | Validation Loss | Accuracy |
+  |-------|---------------|-----------------|----------|
+  |     0 |      1.238 |        1.215 | 0.447 |
+  |     1 |      1.158 |        1.194 | 0.448 |
+
+  | Testing Loss | Accuracy |
+  |---------------|----------|
+  |         1.198 |    0.449 |
+- 研究結果評估：與先前研究的差別在於，先前研究中，是以回答作為單位，預測為 0 且資料為 0 的狀況也有納入正確率計算。然而此處是以問題作為單位，只有預測為 1 且資料為 1 的狀況下才納入正確率計算，因此正確率看似會較低，然而若將先前研究進行預測為 1 且資料為 1 的正確率計算進行比較，實際上的表現仍是 BERT 較佳。
+
 ## 參考資料
 [1] https://stackexchange.com/sites
 
@@ -201,23 +217,7 @@ question_body_original    | string |  問題的原始內容 |
 
 [8] Omondiagbe, O. P, Licorish, S. A. and MacDonell, S. G. (2019). Features that Predict the Acceptability of Java and JavaScript Answers on Stack Overflow .Proceedings of the 23nd International Conference on Evaluation and Assessment in Software Engineering (EASE2018). ACM, 101-110.
 
-## 附錄
-本次研究中另外嘗試了一種方法，將此任務視為單選題，在一個題目中，只有選中正確的答案才算答對，最後計算答對題數除以總題數作為正確率。
-
-- Pre-trained model：BERT AutoModelForMultipleChoice
-- 研究結果：
-
-  | Epoch | Training Loss | Validation Loss | Accuracy |
-  |-------|---------------|-----------------|----------|
-  |     0 |      1.238 |        1.215 | 0.447 |
-  |     1 |      1.158 |        1.194 | 0.448 |
-
-  | Testing Loss | Accuracy |
-  |---------------|----------|
-  |         1.198 |    0.449 |
-- 研究結果評估：與先前研究的差別在於，先前研究中，是以回答作為單位，預測為 0 且資料為 0 的狀況也有納入正確率計算。然而此處是以問題作為單位，只有預測為 1 且資料為 1 的狀況下才納入正確率計算，因此正確率看似會較低，然而若將先前研究進行預測為 1 且資料為 1 的正確率計算進行比較，實際上的表現仍是 BERT 較佳。
-
-
+[9] https://huggingface.co/docs/transformers/tasks/multiple_choice
  
  
  
