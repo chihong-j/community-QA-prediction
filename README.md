@@ -29,7 +29,7 @@
   - community 傾向支持 best answer
 - 辨認最佳回答者 [2]
   - 採用貝氏統計模型
-  - 以Latent Dirichlet Allocation辨認「回答者以往的回覆內容」與「問題本身的文字內容」在主題上的相符程度，以預測成為最佳回答者的機率
+  - 以 Latent Dirichlet Allocation 辨認「回答者以往的回覆內容」與「問題本身的文字內容」在主題上的相符程度，以預測成為最佳回答者的機率
 - 辨認最佳回答 [6]
   - 分析回答的 3 大類特徵：user、content、thread
   - 對不同類型的論壇分別辨認出最具影響力的因素
